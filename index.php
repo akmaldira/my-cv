@@ -3,7 +3,7 @@
 <head>
     <title>CV - Akmal Dira</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="assets/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="assets/all.css">
 </head>
 <body>
     <div class="navbar">
