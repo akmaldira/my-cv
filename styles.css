@@ -1,0 +1,348 @@
+* {padding: 0; margin: 0;}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('img/bg3.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 2000px;
+}
+
+.navbar {
+    position: fixed;
+    display: block;
+    padding: 60px;
+    padding-top: 45px;
+    width: 100%;
+}
+
+.navbar h3 {
+    float: left;
+    margin: auto 0;
+    color: rgb(219, 219, 219);
+}
+
+.navbar ul {
+    padding-left: 750px;
+    display: inline;
+    margin: auto 25px;
+}
+
+.navbar ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(219, 219, 219);
+    padding: 15px 30px;
+    margin: auto 10px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+    background: gray;
+    color: black;
+}
+
+.sidebar {
+    display: block;
+    position: fixed;
+    margin-left: 50px;
+    margin-top: 370px;
+}
+
+.sidebar ul li {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.sidebar ul li a i {
+    transition: 0.5s;
+    color: rgb(219, 219, 219);
+    font-size: 35px;
+}
+
+.sidebar ul li a i:hover {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#home {
+    height: 1024px;
+    text-align: center;
+}
+
+#home img {
+    margin-top: 150px;
+}
+
+#home h1{
+    text-shadow: 3px 3px 5px darkcyan;
+    color: white;
+    letter-spacing: 10px;
+}
+
+#home hr {
+    margin: 35px auto;
+    width: 650px;
+}
+
+#home p {
+    text-shadow: 2px 2px 3px darkcyan;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-top: 20px;
+    color: white;
+}
+
+#about {
+    height: 1024px;
+}
+
+#about img {
+    margin: 380px 1100px;
+    width: 350px;
+    position: absolute;
+}
+
+#about h1 {
+    text-shadow: 2px 3px 5px darkcyan;
+    color: white;
+    letter-spacing: 5px;
+    padding-top: 250px;
+    padding-right: 50px;
+    text-align: center;
+}
+
+#about hr {
+    margin: 35px auto;
+    width: 650px;
+}
+
+#about p {
+    color: black;
+    text-align: justify;
+}
+
+.skill-bars{
+margin-left: 450px;
+padding: 25px 30px;
+width: 600px;
+background: gray;
+box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+border-radius: 10px;
+}
+.skill-bars .bar{
+margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+margin-top: 0px;
+}
+.skill-bars .bar .info{
+margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+font-weight: 500;
+font-size: 17px;
+opacity: 0;
+animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+100%{
+    opacity: 1;
+}
+}
+.skill-bars .bar .progress-line{
+height: 10px;
+width: 100%;
+background: whitesmoke;
+position: relative;
+transform: scaleX(0);
+transform-origin: left;
+border-radius: 10px;
+box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+            0 1px rgba(255,255,255,0.8);
+animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+100%{
+    transform: scaleX(1);
+}
+}
+.bar .progress-line span{
+height: 100%;
+position: absolute;
+border-radius: 10px;
+transform: scaleX(0);
+transform-origin: left;
+background: black;
+animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+width: 50%;
+}
+.bar .progress-line.css span{
+width: 30%;
+}
+.bar .progress-line.php span{
+width: 85%;
+}
+.bar .progress-line.python span{
+width: 60%;
+}
+.bar .progress-line.c span{
+width: 30%;
+}
+.progress-line span::before{
+position: absolute;
+content: "";
+top: -10px;
+right: 0;
+height: 0;
+width: 0;
+border: 7px solid transparent;
+border-bottom-width: 0px;
+border-right-width: 0px;
+border-top-color: #000;
+opacity: 0;
+animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+position: absolute;
+top: -28px;
+right: 0;
+font-weight: 500;
+background: #000;
+color: #fff;
+padding: 1px 8px;
+font-size: 12px;
+border-radius: 3px;
+opacity: 0;
+animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+100%{
+    opacity: 1;
+}
+}
+.progress-line.html span::after{
+content: "50%";
+}
+.progress-line.css span::after{
+content: "30%";
+}
+.progress-line.php span::after{
+content: "85%";
+}
+.progress-line.python span::after{
+content: "60%";
+}
+.progress-line.c span::after{
+content: "30%";
+}
+
+#portfolio {
+    height: 1024px;
+    text-align: center;
+}
+
+#portfolio img {
+    margin-top: 120px;
+}
+
+#portfolio h1{
+    text-shadow: 3px 3px 5px darkcyan;
+    color: white;
+    letter-spacing: 10px;
+}
+
+#portfolio hr {
+    margin: 35px auto;
+    width: 650px;
+}
+
+#portfolio p {
+    text-shadow: 2px 2px 3px darkcyan;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-top: 20px;
+    color: white;
+}
+
+#portfolio ul {
+    display: block;
+    padding-left: 635px;
+}
+
+#portfolio ul li {
+    float: left;
+    display: inline;
+    list-style: none;
+    margin-right: 20px;
+}
+
+#portfolio ul li i {
+    font-size: 100px;
+    margin: 25px 0;
+    color: rgb(24, 24, 24);
+}
+
+#portfolio ul li a {
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+    float: left;
+    display: inline;
+    border-radius: 20px;
+    background: whitesmoke;
+    color: black;
+    transition: 0.3s;
+}
+
+#portfolio ul li a:hover {
+    width: 190px;
+    height: 190px;
+    opacity: 0.8;
+}
+
+#contact {
+    height: 1024px;
+    text-align: center;
+}
+
+#contact h1 {
+    text-shadow: 3px 3px 5px darkcyan;
+    color: white;
+    letter-spacing: 10px;
+    padding-top: 250px;
+}
+
+#contact hr {
+    margin: 35px auto;
+    width: 500px;
+}
+
+#contact ul {
+    padding-top: 50px;
+}
+
+#contact ul li {
+    list-style: none;
+    color: whitesmoke;
+    display: inline-block;
+    width: 300px;
+    letter-spacing: 2px;
+}
+
+#contact ul li i {
+    color: whitesmoke;
+    padding: 20px;
+    font-size: 100px;
+}
